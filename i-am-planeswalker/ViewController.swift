@@ -26,11 +26,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var planeswalkerImageView1: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    var planeswalkerNumber = 0
-    
     override func viewDidLoad(){
+        let mtgColorArray = ["White", "Blue", "Black", "Red", "Green" ]
         
- 
+     //   _ = mtgColorArray[randColor]
+        
+        switch mtgColorArray.randomElement() {
+        case "White":
+            self.view.backgroundColor = UIColor(hex: 0xE9E3CF)
+        case "Blue":
+            self.view.backgroundColor = UIColor(hex: 0x3F8DC2)
+        case "Black":
+            self.view.backgroundColor = UIColor(hex: 0x32302B)
+        case "Red":
+            self.view.backgroundColor = UIColor(hex: 0xBD3829)
+        case "Green":
+            self.view.backgroundColor = UIColor(hex: 0x3A7F4C)
+        default:
+            self.view.backgroundColor = UIColor(hex: 0x3F8DC2)
+
+        }
     }
 
     @IBAction func chaosButtonPressed(_ sender: UIButton) {
@@ -39,34 +54,34 @@ class ViewController: UIViewController {
         self.titleLabel.isHidden = false
         self.planeswalkerImageView1.isHidden = false
         
-        planeswalkerNumber = Int.random(in: 0...2)
-        planeswalkerImageView1.image = [ #imageLiteral(resourceName: "I.M._Weasel__Jace"), #imageLiteral(resourceName: "I.R._Baboon__Garrick"),  #imageLiteral(resourceName: "Cow__Elspeth")][planeswalkerNumber]
+        let planeswalkerArray = [#imageLiteral(resourceName: "I.M._Weasel__Jace"), #imageLiteral(resourceName: "I.R._Baboon__Garruk"),  #imageLiteral(resourceName: "Cow__Elspeth")]
         
-        
+        planeswalkerImageView1.image = planeswalkerArray.randomElement()
         
         /*
-            MTG Hex Color Codes
-            Blue      = "0x3F8DC2"
-            Green     = "0x3A7F4C"
-            White     = "0xE9E3CF"
-            Black     = "0x32302B"
-            Red       = "0xBD3829"
-            Gold      = "0xD2C377"
-            Colorless = "0x8BA6B3"
+         MTG Hex Color Codes
+         ----------------------
+         White     = "0xE9E3CF"
+         Blue      = "0x3F8DC2"
+         Black     = "0x32302B"
+         Red       = "0xBD3829"
+         Green     = "0x3A7F4C"
+         Gold      = "0xD2C377"
+         Colorless = "0x8BA6B3"
          */
         
         // Change UI elements according to planeswalkerNumber
-        switch planeswalkerNumber {
-        case 0:
+        switch planeswalkerImageView1.image {
+        case #imageLiteral(resourceName: "I.M._Weasel__Jace"):
             self.titleLabel.text = "I.M. Jace"
             self.titleLabel.textAlignment = .center
             self.view.backgroundColor = UIColor(hex:0x3F8DC2)
             
-        case 1:
+        case #imageLiteral(resourceName: "I.R._Baboon__Garruk"):
             self.titleLabel.text = "I.R. Garruk"
             self.titleLabel.textAlignment = .center
             self.view.backgroundColor = UIColor(hex:0x3A7F4C)
-        case 2:
+        case #imageLiteral(resourceName: "Cow__Elspeth"):
             self.titleLabel.text = "Elspeth al rescate!"
             self.titleLabel.textAlignment = .center
             self.view.backgroundColor = UIColor(hex:0xE9E3CF)
