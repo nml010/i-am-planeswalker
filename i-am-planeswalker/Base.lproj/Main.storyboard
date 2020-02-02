@@ -15,17 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greetings Planeswalker!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTP-Ra-n4q">
-                                <rect key="frame" x="23" y="44" width="336" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greetings Planeswalker!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTP-Ra-n4q">
+                                <rect key="frame" x="19.666666666666657" y="44" width="336" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="6sa-cD-hUX"/>
+                                    <constraint firstAttribute="width" constant="336" id="8DO-VO-uo8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE7-uH-Meu">
-                                <rect key="frame" x="141" y="700" width="70" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planeswalker_symbol_black" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-yF-Wku" userLabel="I.R._Baboon__Garruk">
+                                <rect key="frame" x="0.0" y="99" width="375" height="593"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="593" id="jyN-bz-ewv"/>
+                                    <constraint firstAttribute="width" constant="375" id="yWl-QP-Nxd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE7-uH-Meu">
+                                <rect key="frame" x="152.66666666666666" y="700" width="70" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EE7-uH-Meu" secondAttribute="height" multiplier="7:6" id="5Xy-on-4ej"/>
+                                    <constraint firstAttribute="width" constant="70" id="Dfs-Fi-5cB"/>
+                                    <constraint firstAttribute="height" constant="60" id="fiB-nL-hcl"/>
+                                </constraints>
                                 <state key="normal" image="CHAOS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,12 +48,18 @@
                                     <action selector="chaosButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qD5-DM-95j"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planeswalker_symbol_black" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-yF-Wku" userLabel="I.R._Baboon__Garruk">
-                                <rect key="frame" x="0.0" y="99" width="375" height="593"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.17416882510000001" green="0.27703607079999998" blue="0.45933723450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EE7-uH-Meu" firstAttribute="top" secondItem="EdQ-yF-Wku" secondAttribute="bottom" constant="8" id="41f-X3-KsE"/>
+                            <constraint firstItem="EdQ-yF-Wku" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Apn-9x-je5"/>
+                            <constraint firstItem="EdQ-yF-Wku" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ClX-eu-r6o"/>
+                            <constraint firstItem="EE7-uH-Meu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K5D-4V-gdJ"/>
+                            <constraint firstItem="dTP-Ra-n4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KEn-pf-jHT"/>
+                            <constraint firstItem="EdQ-yF-Wku" firstAttribute="top" secondItem="dTP-Ra-n4q" secondAttribute="bottom" constant="8" id="NHh-Fw-fyG"/>
+                            <constraint firstItem="EdQ-yF-Wku" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZMu-YI-z9n"/>
+                            <constraint firstItem="dTP-Ra-n4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cK6-sb-FWA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
