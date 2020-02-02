@@ -29,8 +29,6 @@ class ViewController: UIViewController {
     override func viewDidLoad(){
         let mtgColorArray = ["White", "Blue", "Black", "Red", "Green" ]
         
-     //   _ = mtgColorArray[randColor]
-        
         switch mtgColorArray.randomElement() {
         case "White":
             self.view.backgroundColor = UIColor(hex: 0xE9E3CF)
@@ -57,18 +55,6 @@ class ViewController: UIViewController {
         let planeswalkerArray = [#imageLiteral(resourceName: "I.M._Weasel__Jace"), #imageLiteral(resourceName: "I.R._Baboon__Garruk"),  #imageLiteral(resourceName: "Cow__Elspeth")]
         
         planeswalkerImageView1.image = planeswalkerArray.randomElement()
-        
-        /*
-         MTG Hex Color Codes
-         ----------------------
-         White     = "0xE9E3CF"
-         Blue      = "0x3F8DC2"
-         Black     = "0x32302B"
-         Red       = "0xBD3829"
-         Green     = "0x3A7F4C"
-         Gold      = "0xD2C377"
-         Colorless = "0x8BA6B3"
-         */
         
         // Change UI elements according to planeswalkerNumber
         switch planeswalkerImageView1.image {
